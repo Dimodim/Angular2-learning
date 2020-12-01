@@ -1,3 +1,4 @@
+import { RecipeService } from './../../../services/recipe.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { IRecipe } from 'src/app/models/recipe';
 
@@ -8,10 +9,10 @@ import { IRecipe } from 'src/app/models/recipe';
 })
 export class RecipeListComponent {
 
-  @Output() onSelectedRecipe = new EventEmitter();
+  recipes: Array<IRecipe>;
+  constructor(private recipeService: RecipeService){
 
-  recipes: Array<IRecipe> = [
-    {name: 'some name', description: 'some description', imagePath: 'https://image.freepik.com/free-vector/modern-menu-restaurant-grill_1361-1526.jpg'}
-  ]
+    this.recipes = this.recipeService.getRecipes();
 
+  }
 }

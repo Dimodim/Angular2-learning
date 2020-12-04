@@ -7,13 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './recipe-details.component.html',
   styleUrls: ['./recipe-details.component.scss']
 })
-export class RecipeDetailsComponent implements OnInit {
+export class RecipeDetailsComponent {
   @Input() selectedRecipe!: IRecipe;
-  constructor(recipeService: RecipeService) {
-    
-   }
 
-  ngOnInit() {
+  constructor(private recipeService: RecipeService) {
+
+
   }
+  addIngredientsToShoppingList(): void{
+  this.recipeService.addIngredientsToShoppingList(this.selectedRecipe.ingredients);
+}
 
 }

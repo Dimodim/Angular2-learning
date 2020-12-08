@@ -3,18 +3,17 @@ import { IRecipe, Recipe } from 'src/app/models/recipe';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-recipes',
-  templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.scss']
+    selector: 'app-recipes',
+    templateUrl: './recipes.component.html',
+    styleUrls: ['./recipes.component.scss'],
 })
 export class RecipesComponent {
-  selectedRecipe!: IRecipe;
+    selectedRecipe!: IRecipe;
 
-  constructor(private recipeService: RecipeService) {
-    this.recipeService.selectedRecipe.subscribe(
-      (r: Recipe) => {
-        this.selectedRecipe = r;
-        console.log(this.selectedRecipe);
-      });
-  }
+    constructor(private recipeService: RecipeService) {
+        this.recipeService.selectedRecipe.subscribe((r: Recipe) => {
+            this.selectedRecipe = r;
+            console.log(this.selectedRecipe);
+        });
+    }
 }

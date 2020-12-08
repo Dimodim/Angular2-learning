@@ -17,23 +17,19 @@ import { RecipeService } from './services/recipe.service';
 import { ShoppingListService } from './services/shopping-list.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    ShoppingListComponent,
-    ShoppingListEditComponent,
-    RecipeDetailsComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    DropdownDirective,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-  ],
-  providers: [RecipeService, ShoppingListService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        RecipesComponent,
+        ShoppingListComponent,
+        ShoppingListEditComponent,
+        RecipeDetailsComponent,
+        RecipeListComponent,
+        RecipeItemComponent,
+        DropdownDirective,
+    ],
+    imports: [BrowserModule, AppRoutingModule, FormsModule],
+    providers: [RecipeService, ShoppingListService],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

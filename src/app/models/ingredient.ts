@@ -1,5 +1,4 @@
-export interface IIngredient
-{
-  name: string;
-  amount: number;
+export interface IIngredient {
+    name: string;
+    amount: number;
 }

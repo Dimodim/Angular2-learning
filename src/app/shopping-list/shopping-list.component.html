@@ -1,14 +1,15 @@
 <div class="row">
-  <div class="col-xs-10">
-    <app-shopping-list-edit></app-shopping-list-edit>
-    <hr>
-    <ul class="list-group">
-      <a
-        *ngFor="let ingredient of ingredients"
-        class="list-group-item"
-        id="list-product">
-      {{ingredient.name}} {{ingredient.amount}}
-      </a>
-    </ul>
-  </div>
+    <div class="col-xs-10">
+        <app-shopping-list-edit></app-shopping-list-edit>
+        <hr />
+        <ul class="list-group">
+            <a
+                *ngFor="let ingredient of ingredients"
+                class="list-group-item"
+                id="list-product"
+            >
+                {{ ingredient.name }} {{ ingredient.amount }}
+            </a>
+        </ul>
+    </div>
 </div>

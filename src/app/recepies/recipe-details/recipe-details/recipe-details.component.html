@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <img src="" alt="" class="img-responsive" />
+        <img src="{{selectedRecipe.imagePath}}" alt="" class="img-responsive" />
     </div>
 </div>
 <div class="row">
@@ -16,12 +16,12 @@
             </button>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="#" (click)="addIngredientsToShoppingList()"
+                    <a  (click)="addIngredientsToShoppingList()"
                         >To Shop List</a
                     >
                 </li>
-                <li><a href="#">Edit Recipe</a></li>
-                <li><a href="#">Delete Recipe</a></li>
+                <li><a >Edit Recipe</a></li>
+                <li><a >Delete Recipe</a></li>
             </ul>
         </div>
     </div>

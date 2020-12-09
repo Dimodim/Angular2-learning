@@ -7,11 +7,11 @@ import { IRecipe, Recipe } from 'src/app/models/recipe';
     templateUrl: './recipe-item.component.html',
     styleUrls: ['./recipe-item.component.scss'],
 })
-export class RecipeItemComponent {
+export class RecipeItemComponent implements OnInit {
     @Input() recipe!: IRecipe;
+    @Input() index!: number;
     constructor(private recipeService: RecipeService) {}
-
-    onSelected() {
-        this.recipeService.selectedRecipe.emit(this.recipe);
+    ngOnInit(): void {
+        this.recipe = this.recipeService.getRecipeById(this.index);
     }
 }

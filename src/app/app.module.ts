@@ -16,6 +16,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
 import { RecipeService } from './services/recipe.service';
 import { ShoppingListService } from './services/shopping-list.service';
 import { UnselectedRecipesComponent } from './recepies/unselected-recipes/unselected-recipes/unselected-recipes.component';
+import { RecipeEditComponent } from './recepies/recipe-edit/recipe-edit/recipe-edit.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { UnselectedRecipesComponent } from './recepies/unselected-recipes/unsele
         RecipeListComponent,
         RecipeItemComponent,
         DropdownDirective,
-        UnselectedRecipesComponent
+        UnselectedRecipesComponent,
+        RecipeEditComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule],
     providers: [RecipeService, ShoppingListService],

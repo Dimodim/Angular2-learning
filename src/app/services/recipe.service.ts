@@ -7,7 +7,6 @@ import { Injectable, EventEmitter } from '@angular/core';
     providedIn: 'root',
 })
 export class RecipeService {
-    selectedRecipe = new EventEmitter<Recipe>();
     constructor(private shoppingListService: ShoppingListService) {}
     recipes = [
         new Recipe({

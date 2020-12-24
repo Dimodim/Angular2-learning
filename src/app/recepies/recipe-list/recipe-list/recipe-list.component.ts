@@ -17,6 +17,7 @@ export class RecipeListComponent {
     ) {
         this.recipes = this.recipeService.getRecipes();
     }
+
     onNewRecipeSelected() {
         this.router.navigate(['new-recipe'], { relativeTo: this.route });
     }

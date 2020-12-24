@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     curetVisibleFeature = 'recipes';
-    onNavigate(feature: string): void {
-        this.curetVisibleFeature = feature;
-    }
 }

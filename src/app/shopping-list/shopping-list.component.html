@@ -4,9 +4,10 @@
         <hr />
         <ul class="list-group">
             <a
-                *ngFor="let ingredient of ingredients"
+                *ngFor="let ingredient of ingredients; let i=index"
                 class="list-group-item"
                 id="list-product"
+                (click)="onEdit(i)"
             >
                 {{ ingredient.name }} {{ ingredient.amount }}
             </a>

@@ -19,9 +19,12 @@
                         >Manage <span class="caret"></span
                     ></a>
                     <ul class="dropdown-menu">
-                        <li><a>Save</a></li>
-                        <li><a>Fetch</a></li>
+                        <li><a (click)="onSave()">Save</a></li>
+                        <li><a (click)="onFetch()">Fetch</a></li>
                     </ul>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/authentication">Sign Up</a>
                 </li>
             </ul>
         </div>

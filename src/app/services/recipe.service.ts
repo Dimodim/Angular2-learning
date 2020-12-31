@@ -11,30 +11,11 @@ import { Subject } from 'rxjs';
 export class RecipeService {
     recipesChanged = new Subject<IRecipe[]>();
     constructor(private shoppingListService: ShoppingListService) {}
-    recipes = [
-        new Recipe({
-            ingredients: [
-                { name: 'some name of ingredient', amount: 2 },
-                { name: 'some name of ingredient 2', amount: 3 },
-                { name: 'some name of ingredient 3', amount: 4 },
-            ],
-            name: 'some name',
-            description: 'some description',
-            imagePath:
-                'https://image.freepik.com/free-vector/modern-menu-restaurant-grill_1361-1526.jpg',
-        }),
-        new Recipe({
-            ingredients: [
-                { name: 'some name of ingredient', amount: 2 },
-                { name: 'some name of ingredient 2', amount: 3 },
-                { name: 'some name of ingredient 3', amount: 4 },
-            ],
-            name: 'some Other name',
-            description: 'some Other description',
-            imagePath:
-                'https://image.freepik.com/free-vector/modern-menu-restaurant-grill_1361-1526.jpg',
-        }),
-    ];
+    recipes: Array<Recipe> = [];
+    onFetchRecipes(recipes: Array<Recipe>): void {
+        this.recipes = recipes;
+        this.recipesChanged.next(recipes.slice());
+    }
 
     getRecipes(): Array<Recipe> {
         return this.recipes;

@@ -1,3 +1,4 @@
+import { AlertComponent } from './alert/alert/alert.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeItemComponent } from './recepies/recipe-item/recipe-item.component';
 
@@ -36,6 +37,7 @@ import { RecipeResolverService } from './resolvers/recipe-resolver.service';
         UnselectedRecipesComponent,
         RecipeEditComponent,
         AuthComponent,
+        AlertComponent,
     ],
     imports: [
         BrowserModule,
@@ -44,7 +46,12 @@ import { RecipeResolverService } from './resolvers/recipe-resolver.service';
         ReactiveFormsModule,
         HttpClientModule,
     ],
-    providers: [RecipeService, ShoppingListService, DataStorageService, RecipeResolverService],
+    providers: [
+        RecipeService,
+        ShoppingListService,
+        DataStorageService,
+        RecipeResolverService,
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

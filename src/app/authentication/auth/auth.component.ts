@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-auth',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
+    @Input() popupClosed = false;
     signUpMode = true;
     constructor() {}
 

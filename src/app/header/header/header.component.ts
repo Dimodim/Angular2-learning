@@ -1,5 +1,5 @@
-import { DataStorageService } from './../../shared/data-storage.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { DataStorageService } from 'src/app/services/data-storage.service';
 
 @Component({
     selector: 'app-header',

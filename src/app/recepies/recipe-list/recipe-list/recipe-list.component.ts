@@ -4,8 +4,6 @@ import { RecipeService } from './../../../services/recipe.service';
 import {
     Component,
     OnInit,
-    EventEmitter,
-    Output,
     OnDestroy,
 } from '@angular/core';
 import { IRecipe } from 'src/app/models/recipe';

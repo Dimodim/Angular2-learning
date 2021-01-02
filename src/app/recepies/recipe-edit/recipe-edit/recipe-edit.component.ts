@@ -1,4 +1,3 @@
-import { IIngredient } from './../../../models/ingredient';
 import { RecipeService } from './../../../services/recipe.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';

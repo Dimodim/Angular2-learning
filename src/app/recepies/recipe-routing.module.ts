@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RecipeResolverService } from '../resolvers/recipe-resolver.service';
@@ -8,9 +7,9 @@ import { RecipeEditComponent } from './recipe-edit/recipe-edit/recipe-edit.compo
 import { UnselectedRecipesComponent } from './unselected-recipes/unselected-recipes/unselected-recipes.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+    
     {
-        path: 'recipes',
+        path: '',
         component: RecipesComponent,
         children: [
             { path: '', component: UnselectedRecipesComponent },

@@ -16,6 +16,7 @@ import { RecipeModule } from './recepies/recipe.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { DataStorageService } from './services/data-storage.service';
 import { AlertComponent } from './shared/alert/alert.component';
+import { CoreModule } from './core.module';
 
 @NgModule({
     declarations: [
@@ -30,15 +31,8 @@ import { AlertComponent } from './shared/alert/alert.component';
         ReactiveFormsModule,
         AppRoutingModule,
         FormsModule,
-        RecipeModule,
-        ShoppingListModule,
         DirectivesModule,
-    ],
-    providers: [
-        RecipeService,
-        ShoppingListService,
-        DataStorageService,
-        RecipeResolverService,
+        CoreModule,
     ],
     bootstrap: [AppComponent],
 })
